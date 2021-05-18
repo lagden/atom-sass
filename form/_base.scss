@@ -1,0 +1,19 @@
+._atom_frm__base {
+	appearance: none;
+	background: var(--atom_frm__base_background);
+	border: none;
+	border-radius: var(--atom_frm__base_border_radius);
+	box-sizing: border-box;
+	box-shadow: none;
+	color: var(--atom_frm__base_color);
+	display: block;
+	height: var(--atom_frm__base_height);
+	margin: var(--atom_frm__base_margin);
+	outline: 0;
+	padding: var(--atom_frm__base_padding);
+	width: var(--atom_frm__base_width);
+}
+
+._atom_frm__base::placeholder {
+	color: var(--atom_frm__base___placeholder_color);
+}

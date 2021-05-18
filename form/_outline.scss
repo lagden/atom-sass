@@ -1,0 +1,20 @@
+._atom_frm__outline {
+	background: var(--atom_frm__outline_background);
+	border-color: var(--atom_frm__outline_border_color);
+	border-radius: var(--atom_frm__outline_border_radius);
+	border-style: var(--atom_frm__outline_border_style);
+	border-width: var(--atom_frm__outline_border_width);
+	color: var(--atom_frm__outline_color);
+}
+
+._atom_frm__outline:disabled {
+	background: var(--atom_frm__outline___disabled_background);
+	border-color: var(--atom_frm__outline___disabled_border_color);
+	color: var(--atom_frm__outline___disabled_color);
+}
+
+._atom_frm__outline:focus {
+	background: var(--atom_frm__outline___focus_background);
+	border-color: var(--atom_frm__outline___focus_border_color);
+	color: var(--atom_frm__outline___focus_color);
+}

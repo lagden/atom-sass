@@ -1,0 +1,20 @@
+._atom_frm__standard {
+	background: var(--atom_frm__standard_background);
+	border-color: var(--atom_frm__standard_border_color);
+	border-radius: var(--atom_frm__standard_border_radius);
+	border-style: var(--atom_frm__standard_border_style);
+	border-width: var(--atom_frm__standard_border_width);
+	color: var(--atom_frm__standard_color);
+}
+
+._atom_frm__standard:disabled {
+	background: var(--atom_frm__standard___disabled_background);
+	border-color: var(--atom_frm__standard___disabled_border_color);
+	color: var(--atom_frm__standard___disabled_color);
+}
+
+._atom_frm__standard:focus {
+	background: var(--atom_frm__standard___focus_background);
+	border-color: var(--atom_frm__standard___focus_border_color);
+	color: var(--atom_frm__standard___focus_color);
+}

@@ -1,0 +1,39 @@
+._atom_frm__error___message {
+	box-sizing: border-box;
+	color: var(--atom_frm__error___message_color);
+	cursor: pointer;
+	font-size: var(--atom_frm__error___message_font_size);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	visibility: hidden;
+	white-space: nowrap;
+	width: 100%;
+	min-height: 20px;
+	display: block;
+}
+
+._atom_frm___validation ._atom_frm__standard:invalid,
+._atom_frm___validation ._atom_frm__outline:invalid {
+	border-color: var(--atom_frm___invalid);
+}
+
+._atom_frm___validation ._atom_frm__outline:valid,
+._atom_frm___validation ._atom_frm__standard:valid {
+	border-color: var(--atom_frm___valid);
+}
+
+._atom_frm___validation ._atom_frm__outline:focus {
+	background: var(--atom_frm__outline___focus_background);
+	border-color: var(--atom_frm__outline___focus_border_color);
+	color: var(--atom_frm__outline___focus_color);
+}
+
+._atom_frm___validation ._atom_frm__standard:focus {
+	background: var(--atom_frm__standard___focus_background);
+	border-color: var(--atom_frm__standard___focus_border_color);
+	color: var(--atom_frm__standard___focus_color);
+}
+
+._atom_frm___validation ._atom_frm__error___message {
+	visibility: visible;
+}
