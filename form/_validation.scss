@@ -23,13 +23,13 @@
 }
 
 ._atom_frm___validation ._atom_frm__outline:focus {
-	background: var(--atom_frm__outline___focus_background);
+	background-color: var(--atom_frm__outline___focus_background_color);
 	border-color: var(--atom_frm__outline___focus_border_color);
 	color: var(--atom_frm__outline___focus_color);
 }
 
 ._atom_frm___validation ._atom_frm__standard:focus {
-	background: var(--atom_frm__standard___focus_background);
+	background-color: var(--atom_frm__standard___focus_background_color);
 	border-color: var(--atom_frm__standard___focus_border_color);
 	color: var(--atom_frm__standard___focus_color);
 }

@@ -17,7 +17,7 @@
 	--atom_frm__label_margin: 0 0 0.5em;
 	--atom_frm__label_grid_gap: 3px;
 
-	--atom_frm__base_background: transparent;
+	--atom_frm__base_background_color: transparent;
 	--atom_frm__base_border_radius: 0;
 	--atom_frm__base_color: inherit;
 	--atom_frm__base_height: 36px;
@@ -26,32 +26,42 @@
 	--atom_frm__base_width: 100%;
 
 	--atom_frm__base___placeholder_color: hsl(240deg 8% 44% / 85%);
+	--atom_frm__base___loading_background_image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100" width="40" height="40"><path fill="hsl(0deg 0% 100%)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="0.5s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg>');
 
-	--atom_frm__outline_background: transparent;
+	--atom_frm__outline_background_color: transparent;
 	--atom_frm__outline_border_color: var(--atom_color_gray);
 	--atom_frm__outline_border_radius: 3px;
 	--atom_frm__outline_border_style: solid;
 	--atom_frm__outline_border_width: 1px;
 	--atom_frm__outline_color: inherit;
-	--atom_frm__outline___focus_background: transparent;
+	--atom_frm__outline___focus_background_color: transparent;
 	--atom_frm__outline___focus_border_color: var(--atom_frm___focus);
 	--atom_frm__outline___focus_color: inherit;
-	--atom_frm__outline___disabled_background: transparent;
+	--atom_frm__outline___disabled_background_color: transparent;
 	--atom_frm__outline___disabled_border_color: var(--atom_frm___disabled);
 	--atom_frm__outline___disabled_color: inherit;
 
-	--atom_frm__standard_background: transparent;
+	--atom_frm__standard_background_color: transparent;
 	--atom_frm__standard_border_color: var(--atom_color_gray);
 	--atom_frm__standard_border_radius: 0;
 	--atom_frm__standard_border_style: solid;
 	--atom_frm__standard_border_width: 0 0 2px 0;
 	--atom_frm__standard_color: inherit;
-	--atom_frm__standard___focus_background: transparent;
+	--atom_frm__standard___focus_background_color: transparent;
 	--atom_frm__standard___focus_border_color: var(--atom_frm___focus);
 	--atom_frm__standard___focus_color: inherit;
-	--atom_frm__standard___disabled_background: transparent;
+	--atom_frm__standard___disabled_background_color: transparent;
 	--atom_frm__standard___disabled_border_color: var(--atom_frm___disabled);
 	--atom_frm__standard___disabled_color: inherit;
+
+	--atom_frm__select_icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 20 20"><path fill="hsl(0deg 0% 0%)" d="M9.293 12.95l0.707 0.707 5.657-5.657-1.414-1.414-4.243 4.242-4.243-4.242-1.414 1.414z"></path></svg>');
+	--atom_frm__select_background_image: var(--atom_frm__select_icon);
+	--atom_frm__select_background_repeat: no-repeat;
+	--atom_frm__select_background_size: 20px;
+	--atom_frm__select_background_position: calc(100% - 2px) center;
+	--atom_frm__select_padding_right: 26px;
+	--atom_frm__select___focus_background_image: var(--atom_frm__select_icon);
+	--atom_frm__select___disabled_background_image: var(--atom_frm__select_icon);
 
 	--atom_frm__error___message_color: var(--atom_frm___invalid);
 	--atom_frm__error___message_font_size: 0.75em;

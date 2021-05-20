@@ -1,0 +1,18 @@
+._atom_frm__select {
+	background-image: var(--atom_frm__select_background_image);
+	background-repeat: var(--atom_frm__select_background_repeat);
+	background-size: var(--atom_frm__select_background_size);
+	background-position: var(--atom_frm__select_background_position);
+	padding-right: var(--atom_frm__select_padding_right);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+._atom_frm__select:focus {
+	background-image: var(--atom_frm__select___focus_background_image);
+}
+
+._atom_frm__select:disabled {
+	background-image: var(--atom_frm__select___disabled_background_image);
+}

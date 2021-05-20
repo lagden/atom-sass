@@ -1,0 +1,312 @@
+:root {
+  --atom_color_light_gray: hsl(240deg 8% 93%);
+  --atom_color_gray: hsl(240deg 8% 50%);
+  --atom_color_dark_gray: hsl(240deg 8% 33%);
+  --atom_color_red: hsl(357deg 63% 59%);
+  --atom_color_green: hsl(120deg 39% 58%);
+  --atom_color_blue: hsl(209deg 93% 68%);
+  --atom_frm___default: var(--atom_color_dark_gray);
+  --atom_frm___disabled: hsl(240deg 8% 66% / 50%);
+  --atom_frm___required: hsl(257deg 45% 54%);
+  --atom_frm___invalid: var(--atom_color_red);
+  --atom_frm___valid: var(--atom_color_green);
+  --atom_frm___focus: var(--atom_color_blue);
+  --atom_frm___focus_within: var(--atom_color_blue);
+  --atom_frm__label_margin: 0 0 0.5em;
+  --atom_frm__label_grid_gap: 3px;
+  --atom_frm__base_background_color: transparent;
+  --atom_frm__base_border_radius: 0;
+  --atom_frm__base_color: inherit;
+  --atom_frm__base_height: 36px;
+  --atom_frm__base_margin: 0;
+  --atom_frm__base_padding: 0.4em;
+  --atom_frm__base_width: 100%;
+  --atom_frm__base___placeholder_color: hsl(240deg 8% 44% / 85%);
+  --atom_frm__base___loading_background_image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100" width="40" height="40"><path fill="hsl(0deg 0% 100%)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="0.5s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg>');
+  --atom_frm__outline_background_color: transparent;
+  --atom_frm__outline_border_color: var(--atom_color_gray);
+  --atom_frm__outline_border_radius: 3px;
+  --atom_frm__outline_border_style: solid;
+  --atom_frm__outline_border_width: 1px;
+  --atom_frm__outline_color: inherit;
+  --atom_frm__outline___focus_background_color: transparent;
+  --atom_frm__outline___focus_border_color: var(--atom_frm___focus);
+  --atom_frm__outline___focus_color: inherit;
+  --atom_frm__outline___disabled_background_color: transparent;
+  --atom_frm__outline___disabled_border_color: var(--atom_frm___disabled);
+  --atom_frm__outline___disabled_color: inherit;
+  --atom_frm__standard_background_color: transparent;
+  --atom_frm__standard_border_color: var(--atom_color_gray);
+  --atom_frm__standard_border_radius: 0;
+  --atom_frm__standard_border_style: solid;
+  --atom_frm__standard_border_width: 0 0 2px 0;
+  --atom_frm__standard_color: inherit;
+  --atom_frm__standard___focus_background_color: transparent;
+  --atom_frm__standard___focus_border_color: var(--atom_frm___focus);
+  --atom_frm__standard___focus_color: inherit;
+  --atom_frm__standard___disabled_background_color: transparent;
+  --atom_frm__standard___disabled_border_color: var(--atom_frm___disabled);
+  --atom_frm__standard___disabled_color: inherit;
+  --atom_frm__select_icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 20 20"><path fill="hsl(0deg 0% 0%)" d="M9.293 12.95l0.707 0.707 5.657-5.657-1.414-1.414-4.243 4.242-4.243-4.242-1.414 1.414z"></path></svg>');
+  --atom_frm__select_background_image: var(--atom_frm__select_icon);
+  --atom_frm__select_background_repeat: no-repeat;
+  --atom_frm__select_background_size: 20px;
+  --atom_frm__select_background_position: calc(100% - 2px) center;
+  --atom_frm__select_padding_right: 26px;
+  --atom_frm__select___focus_background_image: var(--atom_frm__select_icon);
+  --atom_frm__select___disabled_background_image: var(--atom_frm__select_icon);
+  --atom_frm__error___message_color: var(--atom_frm___invalid);
+  --atom_frm__error___message_font_size: 0.75em;
+  --atom_frm__checkbox_border_radius: 5px;
+  --atom_frm__checkbox_width: 21px;
+  --atom_frm__checkbox_height: 21px;
+  --atom_frm__checkbox___plus___label_and_span_margin: 0 0 0 3px;
+  --atom_frm__checkbox___checked_background_color: var(--atom_color_blue);
+  --atom_frm__checkbox___disabled_background_color: var(--atom_frm___disabled);
+  --atom_frm__checkbox___disabled___checked_background_color: var(--atom_frm___disabled);
+  --atom_frm__checkbox___focus_border: 0px solid var(--atom_frm___focus);
+  --atom_frm__checkbox___not_switch___after_width: 5px;
+  --atom_frm__checkbox___not_switch___after_height: 9px;
+  --atom_frm__checkbox___not_switch___after_border: 2px solid hsl(0deg 100% 100%);
+  --atom_frm__checkbox___not_switch___checked_opacity: 1;
+  --atom_frm__checkbox___not_switch___checked_rotate: 43deg;
+  --atom_frm__checkbox___not_switch___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
+  --atom_frm__checkbox___not_switch___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
+  --atom_frm__checkbox_switch_width: 38px;
+  --atom_frm__checkbox_switch_border_radius: 11px;
+  --atom_frm__checkbox_switch___after_border_radius: 50%;
+  --atom_frm__checkbox_switch___after_width: 17px;
+  --atom_frm__checkbox_switch___after_height: 17px;
+  --atom_frm__checkbox_switch___after_background_color: hsl(0deg 100% 100%);
+  --atom_frm__checkbox_switch___checked_translate_x: 17px;
+  --atom_frm__checkbox_switch___focus_box_shadow: 0 0 0 7px hsl(240deg 8% 30% / 20%);
+  --atom_frm__checkbox_switch___focus___checked_box_shadow: 0 0 0 7px hsl(209deg 93% 68% / 20%); }
+
+/* Label */
+._atom_frm__label {
+  display: block;
+  margin: var(--atom_frm__label_margin); }
+
+._atom_frm__label___checkbox {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-gap: var(--atom_frm__label_grid_gap);
+  width: fit-content;
+  align-items: flex-start; }
+
+._atom_frm__base {
+  appearance: none;
+  background-color: var(--atom_frm__base_background_color);
+  border: none;
+  border-radius: var(--atom_frm__base_border_radius);
+  box-sizing: border-box;
+  box-shadow: none;
+  color: var(--atom_frm__base_color);
+  display: block;
+  height: var(--atom_frm__base_height);
+  margin: var(--atom_frm__base_margin);
+  outline: 0;
+  padding: var(--atom_frm__base_padding);
+  width: var(--atom_frm__base_width); }
+
+._atom_frm__base::placeholder {
+  color: var(--atom_frm__base___placeholder_color); }
+
+._atom_frm__outline {
+  background-color: var(--atom_frm__outline_background_color);
+  border-color: var(--atom_frm__outline_border_color);
+  border-radius: var(--atom_frm__outline_border_radius);
+  border-style: var(--atom_frm__outline_border_style);
+  border-width: var(--atom_frm__outline_border_width);
+  color: var(--atom_frm__outline_color); }
+
+._atom_frm__outline:disabled {
+  background-color: var(--atom_frm__outline___disabled_background_color);
+  border-color: var(--atom_frm__outline___disabled_border_color);
+  color: var(--atom_frm__outline___disabled_color); }
+
+._atom_frm__outline:focus {
+  background-color: var(--atom_frm__outline___focus_background_color);
+  border-color: var(--atom_frm__outline___focus_border_color);
+  color: var(--atom_frm__outline___focus_color); }
+
+._atom_frm__standard {
+  background-color: var(--atom_frm__standard_background_color);
+  border-color: var(--atom_frm__standard_border_color);
+  border-radius: var(--atom_frm__standard_border_radius);
+  border-style: var(--atom_frm__standard_border_style);
+  border-width: var(--atom_frm__standard_border_width);
+  color: var(--atom_frm__standard_color); }
+
+._atom_frm__standard:disabled {
+  background-color: var(--atom_frm__standard___disabled_background_color);
+  border-color: var(--atom_frm__standard___disabled_border_color);
+  color: var(--atom_frm__standard___disabled_color); }
+
+._atom_frm__standard:focus {
+  background-color: var(--atom_frm__standard___focus_background_color);
+  border-color: var(--atom_frm__standard___focus_border_color);
+  color: var(--atom_frm__standard___focus_color); }
+
+._atom_frm__select {
+  background-image: var(--atom_frm__select_background_image);
+  background-repeat: var(--atom_frm__select_background_repeat);
+  background-size: var(--atom_frm__select_background_size);
+  background-position: var(--atom_frm__select_background_position);
+  padding-right: var(--atom_frm__select_padding_right);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+._atom_frm__select:focus {
+  background-image: var(--atom_frm__select___focus_background_image); }
+
+._atom_frm__select:disabled {
+  background-image: var(--atom_frm__select___disabled_background_image); }
+
+._atom_frm__checkbox {
+  box-sizing: border-box;
+  appearance: none;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: var(--atom_frm__checkbox_height);
+  margin: 0 0 0 6px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: var(--atom_frm__checkbox_box_shadow, none);
+  border: none;
+  background-color: var(--atom_frm__checkbox_background_color, var(--atom_color_gray));
+  transition: background-color .3s, box-shadow .3s; }
+
+._atom_frm__checkbox:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  transition: transform .3s ease, opacity .2s, box-shadow .3s; }
+
+._atom_frm__checkbox + span,
+._atom_frm__checkbox + label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: var(--atom_frm__checkbox___plus___label_and_span_margin); }
+
+._atom_frm__checkbox:checked {
+  --atom_frm__checkbox_background_color: var(--atom_frm__checkbox___checked_background_color); }
+
+._atom_frm__checkbox:disabled {
+  --atom_frm__checkbox_background_color: var(--atom_frm__checkbox___disabled_background_color);
+  cursor: not-allowed;
+  /*opacity: .9;*/ }
+
+._atom_frm__checkbox:disabled:checked {
+  --atom_frm__checkbox_background_color: var(--atom_frm__checkbox___disabled___checked_background_color); }
+
+._atom_frm__checkbox:disabled + span,
+._atom_frm__checkbox:disabled + label {
+  cursor: not-allowed;
+  opacity: .5; }
+
+._atom_frm__checkbox:not(._atom_frm__checkbox___switch) {
+  width: var(--atom_frm__checkbox_width);
+  border-radius: var(--atom_frm__checkbox_border_radius); }
+
+._atom_frm__checkbox:not(._atom_frm__checkbox___switch):focus {
+  --atom_frm__checkbox_box_shadow: var(--atom_frm__checkbox___not_switch___focus_box_shadow); }
+
+._atom_frm__checkbox:not(._atom_frm__checkbox___switch):after {
+  width: var(--atom_frm__checkbox___not_switch___after_width);
+  height: var(--atom_frm__checkbox___not_switch___after_height);
+  border: var(--atom_frm__checkbox___not_switch___after_border);
+  border-top: 0;
+  border-left: 0;
+  margin: auto;
+  top: 41%;
+  right: 47%;
+  bottom: auto;
+  left: auto;
+  opacity: var(--atom_frm__checkbox___not_switch___after_opacity, 0);
+  transform: translate(50%, -50%) rotate(var(--atom_frm__checkbox___not_switch___after_rotate, 20deg));
+  transform-origin: center; }
+
+._atom_frm__checkbox:not(._atom_frm__checkbox___switch):checked {
+  --atom_frm__checkbox___not_switch___after_opacity: var(--atom_frm__checkbox___not_switch___checked_opacity);
+  --atom_frm__checkbox___not_switch___after_rotate: var(--atom_frm__checkbox___not_switch___checked_rotate); }
+
+._atom_frm__checkbox._atom_frm__checkbox___switch {
+  width: var(--atom_frm__checkbox_switch_width);
+  border-radius: var(--atom_frm__checkbox_switch_border_radius); }
+
+._atom_frm__checkbox._atom_frm__checkbox___switch:after {
+  left: 2px;
+  top: 2px;
+  border-radius: var(--atom_frm__checkbox_switch___after_border_radius);
+  width: var(--atom_frm__checkbox_switch___after_width);
+  height: var(--atom_frm__checkbox_switch___after_height);
+  box-shadow: var(--atom_frm__checkbox_switch___after_box_shadow, none);
+  background-color: var(--atom_frm__checkbox_switch___after_background_color);
+  transform: translateX(var(--atom_frm__checkbox_switch___after_translate_x, 0)); }
+
+._atom_frm__checkbox._atom_frm__checkbox___switch:checked {
+  --atom_frm__checkbox_switch___after_translate_x: var(--atom_frm__checkbox_switch___checked_translate_x); }
+
+._atom_frm__checkbox._atom_frm__checkbox___switch:focus {
+  --atom_frm__checkbox_switch___after_box_shadow: var(--atom_frm__checkbox_switch___focus_box_shadow); }
+
+._atom_frm___validation ._atom_frm__checkbox:invalid {
+  --atom_frm__checkbox_background_color: var(--atom_frm___invalid); }
+
+._atom_frm___validation ._atom_frm__checkbox:valid {
+  --atom_frm__checkbox_background_color: var(--atom_frm___valid); }
+
+._atom_frm__checkbox_group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5em 1em; }
+
+@media only screen and (min-width: 600px) {
+  ._atom_frm__checkbox_group {
+    grid-template-columns: max-content max-content; } }
+
+._atom_frm__error___message {
+  box-sizing: border-box;
+  color: var(--atom_frm__error___message_color);
+  cursor: pointer;
+  font-size: var(--atom_frm__error___message_font_size);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: hidden;
+  white-space: nowrap;
+  width: 100%;
+  min-height: 20px;
+  display: block; }
+
+._atom_frm___validation ._atom_frm__standard:invalid,
+._atom_frm___validation ._atom_frm__outline:invalid {
+  border-color: var(--atom_frm___invalid); }
+
+._atom_frm___validation ._atom_frm__outline:valid,
+._atom_frm___validation ._atom_frm__standard:valid {
+  border-color: var(--atom_frm___valid); }
+
+._atom_frm___validation ._atom_frm__outline:focus {
+  background-color: var(--atom_frm__outline___focus_background_color);
+  border-color: var(--atom_frm__outline___focus_border_color);
+  color: var(--atom_frm__outline___focus_color); }
+
+._atom_frm___validation ._atom_frm__standard:focus {
+  background-color: var(--atom_frm__standard___focus_background_color);
+  border-color: var(--atom_frm__standard___focus_border_color);
+  color: var(--atom_frm__standard___focus_color); }
+
+._atom_frm___validation ._atom_frm__error___message {
+  visibility: visible; }
