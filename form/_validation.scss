@@ -9,7 +9,8 @@
 	white-space: nowrap;
 	width: 100%;
 	min-height: 20px;
-	display: block;
+	display: flex;
+	align-items: center;
 }
 
 ._atom_frm___validation ._atom_frm__standard:invalid,
