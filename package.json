@@ -11,7 +11,7 @@
   "main": "dist/atom.css",
   "type": "module",
   "files": [
-    "src",
+    "form",
     "dist",
     "README.md"
   ],

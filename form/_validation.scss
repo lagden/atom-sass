@@ -8,9 +8,9 @@
 	visibility: hidden;
 	white-space: nowrap;
 	width: 100%;
-	min-height: 20px;
-	display: flex;
-	align-items: center;
+	min-height: 25px;
+	line-height: 25px;
+	display: block;
 }
 
 ._atom_frm___validation ._atom_frm__standard:invalid,
