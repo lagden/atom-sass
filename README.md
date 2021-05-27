@@ -21,7 +21,7 @@ yarn set version berry
 ```shell
 yarn dlx degit lagden/boilerplate-svelte#master projeto
 cd projeto
-yarn dlx degit lagden/atom-sass#main src/_assets/sass/. --force
+yarn dlx degit lagden/atom-sass/form#main src/_assets/sass/form --force
 ```
 
 or
