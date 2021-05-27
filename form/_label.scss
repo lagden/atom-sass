@@ -4,11 +4,16 @@
 	margin: var(--atom_frm__label_margin);
 }
 
+._atom_frm__label:focus,
+._atom_frm__label:focus-within {
+	color: var(--atom_frm__label___focus_color);
+}
+
 ._atom_frm__label___checkbox {
 	display: inline-grid;
 	grid-auto-flow: column;
 	grid-template-columns: auto;
-	grid-gap: var(--atom_frm__label_grid_gap);
+	grid-gap: var(--atom_frm__label___checkbox_grid_gap);
 	width: fit-content;
 	align-items: flex-start;
 }
