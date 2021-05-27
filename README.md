@@ -27,7 +27,6 @@ yarn dlx degit lagden/atom-sass#main src/_assets/sass/. --force
 or
 
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/lagden/atom-sass/main/dist/atom.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lagden/atom-sass/dist/atom.css" />
 ```
 
