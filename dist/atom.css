@@ -15,6 +15,8 @@
   --atom_frm__label_margin: 0 0 0.5em;
   --atom_frm__label___checkbox_grid_gap: 3px;
   --atom_frm__label___focus_color: var(--atom_frm___focus_within);
+  --atom_frm__label___disabled_color: var(--atom_frm___disabled);
+  --atom_frm__label___disabled___after_color: var(--atom_frm___disabled);
   --atom_frm__base_background_color: transparent;
   --atom_frm__base_border_radius: 0;
   --atom_frm__base_color: inherit;
@@ -99,6 +101,15 @@
   grid-gap: var(--atom_frm__label___checkbox_grid_gap);
   width: fit-content;
   align-items: flex-start; }
+
+._atom_frm__label___required:after {
+  content: ' *';
+  color: var(--atom_frm__label___required___after_color); }
+
+._atom_frm__label___disabled {
+  color: var(--atom_frm__label___disabled_color); }
+  ._atom_frm__label___disabled:after {
+    color: var(--atom_frm__label___disabled___after_color); }
 
 ._atom_frm__base {
   appearance: none;
