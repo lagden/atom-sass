@@ -27,6 +27,7 @@ yarn dlx degit lagden/atom-sass#main src/_assets/sass/. --force
 or
 
 ```html
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lagden/atom-sass/dist/atom.css" />
 ```
 
