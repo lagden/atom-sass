@@ -17,3 +17,16 @@
 	width: fit-content;
 	align-items: flex-start;
 }
+
+._atom_frm__label___required {
+	&:after {
+		content: ' *';
+		color: var(--atom_frm___required);
+	}
+
+._atom_frm__label____disabled {
+	color: var(--atom_frm___disabled);
+	&:after {
+		color: var(--atom_frm___disabled);
+	}
+}
