@@ -218,8 +218,8 @@ __metadata:
   linkType: hard
 
 "cacache@npm:^15.0.5":
-  version: 15.1.0
-  resolution: "cacache@npm:15.1.0"
+  version: 15.2.0
+  resolution: "cacache@npm:15.2.0"
   dependencies:
     "@npmcli/move-file": ^1.0.1
     chownr: ^2.0.0
@@ -238,7 +238,7 @@ __metadata:
     ssri: ^8.0.1
     tar: ^6.0.2
     unique-filename: ^1.1.1
-  checksum: 620f1cc942f820ab701121237488a25b892516b18346b13a4e9028722f0e7c9e7b5f82dbaf1a19a97df5ae2b4b32fb223fc5e8670ae7b84d1ae3e0a71aeb473b
+  checksum: e7d6a93c34a409abb6050e4e09a103e859f0b53f592772a714e9e828f735cee8974cb36bd3e2d08fd78c2198d6d4b6005d0f1b3974e891a2ea4bd0ef02c80593
   languageName: node
   linkType: hard
 
@@ -762,11 +762,11 @@ __metadata:
   linkType: hard
 
 "iconv-lite@npm:^0.6.2":
-  version: 0.6.2
-  resolution: "iconv-lite@npm:0.6.2"
+  version: 0.6.3
+  resolution: "iconv-lite@npm:0.6.3"
   dependencies:
     safer-buffer: ">= 2.1.2 < 3.0.0"
-  checksum: 0785670120f57b5912c6a4391d6a69914906746d259b59de884dc6d324a52a0abde38d5804f67370192fec6878d01e7306de525568abcea70eb41c2bceb9f547
+  checksum: 9b4f24db662b717340ae20ec9ebbaf0648b378a2d0fc64aef83c6bccdd9918b622216c020e177ddf2d02eeff8456a732e85b6d989eb2cd3a40519f3e179b273c
   languageName: node
   linkType: hard
 
@@ -1399,9 +1399,9 @@ __metadata:
   linkType: hard
 
 "path-parse@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "path-parse@npm:1.0.6"
-  checksum: 2eee4b93fb3ae13600e3fca18390d9933bbbcf725a624f6b8df020d87515a74872ff6c58072190d6dc75a5584a683dc6ae5c385ad4e4f4efb6e66af040d56c67
+  version: 1.0.7
+  resolution: "path-parse@npm:1.0.7"
+  checksum: 6de0bfa37b4f09af465ff3900fb4104ca9cb1e1fa5cbe869c40cedd10d5d625d04c284afc34967830eee780bf83fd69c017d72a23ffd35718ec861192ec91dd9
   languageName: node
   linkType: hard
 
@@ -1786,9 +1786,9 @@ resolve@^1.10.0:
   linkType: hard
 
 "spdx-license-ids@npm:^3.0.0":
-  version: 3.0.8
-  resolution: "spdx-license-ids@npm:3.0.8"
-  checksum: f6a996f2d4ca7116e6a820e1dc702833f2c7dcb0997e28baa721a74fac53d675de88c27ae2e76498a8d5bffe30a194aadc130eca01bc71a9706832062aca7316
+  version: 3.0.9
+  resolution: "spdx-license-ids@npm:3.0.9"
+  checksum: a4d970d859bc5eeef3a95d7597fa39b36b2c046153d3d2c9876293d84457b0456a56aef7f45e1d3c3129cf7557c35305dffaddbcff630f7df72cb359aed78ce1
   languageName: node
   linkType: hard
 
