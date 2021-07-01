@@ -1,4 +1,5 @@
 :root {
+	// Base colors
 	--atom_color_light_gray: hsl(240deg 8% 93%);
 	--atom_color_gray: hsl(240deg 8% 50%);
 	--atom_color_dark_gray: hsl(240deg 8% 33%);
@@ -6,21 +7,27 @@
 	--atom_color_green: hsl(120deg 39% 58%);
 	--atom_color_blue: hsl(209deg 93% 68%);
 
+	// Form colors
 	--atom_frm___default: var(--atom_color_dark_gray);
-	--atom_frm___disabled: hsl(240deg 8% 66% / 50%);
+	--atom_frm___disabled: hsl(240deg 8% 66% / 80%);
 	--atom_frm___required: hsl(257deg 45% 54%);
 	--atom_frm___invalid: var(--atom_color_red);
 	--atom_frm___valid: var(--atom_color_green);
 	--atom_frm___focus: var(--atom_color_blue);
 	--atom_frm___focus_within: var(--atom_color_blue);
 
+	// Label
 	--atom_frm__label_margin: 0 0 0.5em;
 	--atom_frm__label_color: inherit;
-	--atom_frm__label___checkbox_grid_gap: 3px;
+	--atom_frm__label___checkbox_radio_grid_gap: 3px;
 	--atom_frm__label___focus_color: var(--atom_frm___focus_within);
 	--atom_frm__label___disabled_color: var(--atom_frm___disabled);
 	--atom_frm__label___disabled___after_color: var(--atom_frm___disabled);
 
+	// Group
+	--atom_frm__group_grid_gap: 0.5em 1em;
+
+	// Base form
 	--atom_frm__base_background_color: transparent;
 	--atom_frm__base_border_radius: 0;
 	--atom_frm__base_color: inherit;
@@ -32,6 +39,7 @@
 	--atom_frm__base___placeholder_color: hsl(240deg 8% 44% / 85%);
 	--atom_frm__base___loading_background_image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100" width="40" height="40"><path fill="hsl(0deg 0% 100%)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="0.5s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg>');
 
+	// Outline form
 	--atom_frm__outline_background_color: transparent;
 	--atom_frm__outline_border_color: var(--atom_color_gray);
 	--atom_frm__outline_border_radius: 3px;
@@ -45,6 +53,7 @@
 	--atom_frm__outline___disabled_border_color: var(--atom_frm___disabled);
 	--atom_frm__outline___disabled_color: inherit;
 
+	// Standard form
 	--atom_frm__standard_background_color: transparent;
 	--atom_frm__standard_border_color: var(--atom_color_gray);
 	--atom_frm__standard_border_radius: 0;
@@ -58,6 +67,7 @@
 	--atom_frm__standard___disabled_border_color: var(--atom_frm___disabled);
 	--atom_frm__standard___disabled_color: inherit;
 
+	// Select
 	--atom_frm__select_icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 20 20"><path fill="hsl(0deg 0% 0%)" d="M9.293 12.95l0.707 0.707 5.657-5.657-1.414-1.414-4.243 4.242-4.243-4.242-1.414 1.414z"></path></svg>');
 	--atom_frm__select_background_image: var(--atom_frm__select_icon);
 	--atom_frm__select_background_repeat: no-repeat;
@@ -67,12 +77,11 @@
 	--atom_frm__select___focus_background_image: var(--atom_frm__select_icon);
 	--atom_frm__select___disabled_background_image: var(--atom_frm__select_icon);
 
-	--atom_frm__error___message_color: var(--atom_frm___invalid);
-	--atom_frm__error___message_font_size: 0.75em;
-
+	// Checkbox + Switch Mode
 	--atom_frm__checkbox_border_radius: 5px;
 	--atom_frm__checkbox_width: 21px;
 	--atom_frm__checkbox_height: 21px;
+	--atom_frm__checkbox_margin: 0 0 0 6px;
 	--atom_frm__checkbox___plus___label_and_span_margin: 0 0 0 3px;
 	--atom_frm__checkbox___checked_background_color: var(--atom_color_blue);
 	--atom_frm__checkbox___disabled_background_color: var(--atom_frm___disabled);
@@ -81,8 +90,13 @@
 
 	--atom_frm__checkbox___not_switch___after_width: 5px;
 	--atom_frm__checkbox___not_switch___after_height: 9px;
-	--atom_frm__checkbox___not_switch___after_border: 2px solid hsl(0deg 100% 100%);
+	--atom_frm__checkbox___not_switch___after_border: 2px solid hsl(0deg 0% 100%);
+
+	--atom_frm__checkbox___not_switch___after_border_radius: var(--atom_frm__checkbox_border_radius);
+	--atom_frm__checkbox___not_switch___after_background_color: hsl(0deg 0% 100%);
+
 	--atom_frm__checkbox___not_switch___checked_opacity: 1;
+	--atom_frm__checkbox___not_switch___checked_scale: 0.5;
 	--atom_frm__checkbox___not_switch___checked_rotate: 43deg;
 	--atom_frm__checkbox___not_switch___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
 	--atom_frm__checkbox___not_switch___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
@@ -96,4 +110,28 @@
 	--atom_frm__checkbox_switch___checked_translate_x: 17px;
 	--atom_frm__checkbox_switch___focus_box_shadow: 0 0 0 7px hsl(240deg 8% 30% / 20%);
 	--atom_frm__checkbox_switch___focus___checked_box_shadow: 0 0 0 7px hsl(209deg 93% 68% / 20%);
+
+	// Radio + Toggle Mode
+	--atom_frm__radio_width: 21px;
+	--atom_frm__radio_height: 21px;
+	--atom_frm__radio_border_radius: 50%;
+	--atom_frm__radio_margin: 0 0 0 6px;
+	--atom_frm__radio___plus___label_and_span_margin: 0 0 0 3px;
+	--atom_frm__radio___checked_background_color: var(--atom_color_blue);
+	--atom_frm__radio___disabled_background_color: var(--atom_frm___disabled);
+	--atom_frm__radio___disabled___checked_background_color: var(--atom_frm___disabled);
+
+	--atom_frm__radio___after_width: 5px;
+	--atom_frm__radio___after_height: 9px;
+	--atom_frm__radio___after_border: 2px solid hsl(0deg 100% 100%);
+	--atom_frm__radio___after_border_radius: 50%;
+	--atom_frm__radio___after_background_color: hsl(0deg 0% 100%);
+	--atom_frm__radio___checked_opacity: 1;
+	--atom_frm__radio___checked_scale: 0.5;
+	--atom_frm__radio___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
+	--atom_frm__radio___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
+
+	// Validation Error
+	--atom_frm__error___message_color: var(--atom_frm___invalid);
+	--atom_frm__error___message_font_size: 0.75em;
 }

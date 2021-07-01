@@ -1,0 +1,72 @@
+._atom_frm__radio {
+	appearance: none;
+	box-sizing: border-box;
+	outline: none;
+	position: relative;
+	width: var(--atom_frm__radio_width);
+	height: var(--atom_frm__radio_height);
+	background-color: var(--atom_frm__radio_background_color, var(--atom_color_gray));
+	box-shadow: var(--atom_frm__radio_box_shadow, none);
+	border-radius: var(--atom_frm__radio_border_radius);
+	margin: var(--atom_frm__radio_margin);
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	transition: background-color .3s, box-shadow .3s;
+}
+
+._atom_frm__radio + span,
+._atom_frm__radio + label {
+	@extend %atom_frm_inline_flex_center;
+	cursor: pointer;
+	margin: var(--atom_frm__radio___plus___label_and_span_margin);
+}
+
+._atom_frm__radio:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: auto;
+	bottom: auto;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border-radius: var(--atom_frm__radio___after_border_radius);
+	background-color: var(--atom_frm__radio___after_background_color);
+	opacity: var(--atom_frm__radio___after_opacity, 0);
+	transform: scale(var(--atom_frm__radio___after_scale, 0));
+	transform-origin: center;
+	transition: transform .3s ease, opacity .2s;
+}
+
+._atom_frm__radio:checked {
+	--atom_frm__radio___after_opacity: var(--atom_frm__radio___checked_opacity);
+	--atom_frm__radio___after_scale: var(--atom_frm__radio___checked_scale);
+	--atom_frm__radio_background_color: var(--atom_frm__radio___checked_background_color);
+}
+
+._atom_frm__radio:disabled {
+	--atom_frm__radio_background_color: var(--atom_frm__radio___disabled_background_color);
+	cursor: not-allowed;
+}
+
+._atom_frm__radio:disabled + span,
+._atom_frm__radio:disabled + label {
+	color: var(--atom_frm__label___disabled_color);
+	cursor: not-allowed;
+}
+
+._atom_frm__radio:focus {
+	--atom_frm__radio_box_shadow: var(--atom_frm__radio___focus_box_shadow);
+}
+
+// Validation
+._atom_frm___validation ._atom_frm__radio:invalid {
+	--atom_frm__radio_background_color: var(--atom_frm___invalid);
+}
+
+._atom_frm___validation ._atom_frm__radio:valid {
+	--atom_frm__radio_background_color: var(--atom_frm___valid);
+}

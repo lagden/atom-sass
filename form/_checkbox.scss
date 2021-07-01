@@ -1,19 +1,24 @@
 ._atom_frm__checkbox {
-	box-sizing: border-box;
+	@extend %atom_frm_inline_flex_center;
 	appearance: none;
+	box-sizing: border-box;
 	outline: none;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
 	position: relative;
 	height: var(--atom_frm__checkbox_height);
-	margin: 0 0 0 6px;
-	padding: 0;
-	cursor: pointer;
+	background-color: var(--atom_frm__checkbox_background_color, var(--atom_color_gray));
+	margin: var(--atom_frm__checkbox_margin);
 	box-shadow: var(--atom_frm__checkbox_box_shadow, none);
 	border: none;
-	background-color: var(--atom_frm__checkbox_background_color, var(--atom_color_gray));
+	padding: 0;
+	cursor: pointer;
 	transition: background-color .3s, box-shadow .3s;
+}
+
+._atom_frm__checkbox + span,
+._atom_frm__checkbox + label {
+		@extend %atom_frm_inline_flex_center;
+		cursor: pointer;
+		margin: var(--atom_frm__checkbox___plus___label_and_span_margin);
 }
 
 ._atom_frm__checkbox:after {
@@ -27,15 +32,6 @@
 	transition: transform .3s ease, opacity .2s, box-shadow .3s;
 }
 
-._atom_frm__checkbox + span,
-._atom_frm__checkbox + label {
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		margin: var(--atom_frm__checkbox___plus___label_and_span_margin);
-}
-
 ._atom_frm__checkbox:checked {
 	--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___checked_background_color);
 }
@@ -43,17 +39,16 @@
 ._atom_frm__checkbox:disabled {
 	--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___disabled_background_color);
 	cursor: not-allowed;
-	/*opacity: .9;*/
 }
 
-._atom_frm__checkbox:disabled:checked {
-	--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___disabled___checked_background_color);
-}
+// ._atom_frm__checkbox:disabled:checked {
+// 	--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___disabled___checked_background_color);
+// }
 
 ._atom_frm__checkbox:disabled + span,
 ._atom_frm__checkbox:disabled + label {
+	color: var(--atom_frm__label___disabled_color);
 	cursor: not-allowed;
-	opacity: .5;
 }
 
 ._atom_frm__checkbox:not(._atom_frm__checkbox___switch) {
@@ -64,6 +59,22 @@
 ._atom_frm__checkbox:not(._atom_frm__checkbox___switch):focus {
 	--atom_frm__checkbox_box_shadow: var(--atom_frm__checkbox___not_switch___focus_box_shadow);
 }
+
+// ._atom_frm__checkbox:not(._atom_frm__checkbox___switch):after {
+// 	width: 100%;
+// 	height: 100%;
+// 	margin: 0;
+// 	border-radius: var(--atom_frm__checkbox___not_switch___after_border_radius);
+// 	background-color: var(--atom_frm__checkbox___not_switch___after_background_color);
+// 	opacity: var(--atom_frm__checkbox___not_switch___after_opacity, 0);
+// 	transform: scale(var(--atom_frm__checkbox___not_switch___after_scale, 0));
+// 	transform-origin: center;
+// }
+
+// ._atom_frm__checkbox:not(._atom_frm__checkbox___switch):checked {
+// 	--atom_frm__checkbox___not_switch___after_opacity: var(--atom_frm__checkbox___not_switch___checked_opacity);
+// 	--atom_frm__checkbox___not_switch___after_scale: var(--atom_frm__checkbox___not_switch___checked_scale);
+// }
 
 ._atom_frm__checkbox:not(._atom_frm__checkbox___switch):after {
 	width: var(--atom_frm__checkbox___not_switch___after_width);
@@ -86,6 +97,7 @@
 	--atom_frm__checkbox___not_switch___after_rotate: var(--atom_frm__checkbox___not_switch___checked_rotate);
 }
 
+// Switch Mode
 ._atom_frm__checkbox._atom_frm__checkbox___switch {
 	width: var(--atom_frm__checkbox_switch_width);
 	border-radius: var(--atom_frm__checkbox_switch_border_radius);
@@ -110,22 +122,11 @@
 	--atom_frm__checkbox_switch___after_box_shadow: var(--atom_frm__checkbox_switch___focus_box_shadow);
 }
 
+// Validation
 ._atom_frm___validation ._atom_frm__checkbox:invalid {
 	--atom_frm__checkbox_background_color: var(--atom_frm___invalid);
 }
 
 ._atom_frm___validation ._atom_frm__checkbox:valid {
 	--atom_frm__checkbox_background_color: var(--atom_frm___valid);
-}
-
-._atom_frm__checkbox_group {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 0.5em 1em;
-}
-
-@media only screen and (min-width: 600px) {
-	._atom_frm__checkbox_group {
-		grid-template-columns: max-content max-content;
-	}
 }

@@ -10,11 +10,12 @@
 	color: var(--atom_frm__label___focus_color);
 }
 
+._atom_frm__label___radio,
 ._atom_frm__label___checkbox {
 	display: inline-grid;
 	grid-auto-flow: column;
 	grid-template-columns: auto;
-	grid-gap: var(--atom_frm__label___checkbox_grid_gap);
+	grid-gap: var(--atom_frm__label___checkbox_radio_grid_gap);
 	width: fit-content;
 	align-items: flex-start;
 }

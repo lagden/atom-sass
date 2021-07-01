@@ -1,0 +1,12 @@
+._atom_frm__group {
+	display: grid;
+	grid-gap: var(--atom_frm__group_grid_gap);
+	// grid-template-columns: 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
+}
+
+// @media (min-width: 600px) {
+// 	._atom_frm__group {
+// 		grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
+// 	}
+// }
