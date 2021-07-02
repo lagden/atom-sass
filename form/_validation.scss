@@ -13,28 +13,51 @@
 	display: block;
 }
 
-._atom_frm___validation ._atom_frm__standard:invalid,
-._atom_frm___validation ._atom_frm__outline:invalid {
-	border-color: var(--atom_frm___invalid);
-}
+// Validation
+._atom_frm___validation {
+	// Invalid
+	._atom_frm__radio._atom_frm__radio___toggle:invalid + span,
+	._atom_frm__radio._atom_frm__radio___toggle:invalid + label,
+	._atom_frm__radio:invalid {
+		--atom_frm__radio_background_color: var(--atom_frm___invalid);
+	}
 
-._atom_frm___validation ._atom_frm__outline:valid,
-._atom_frm___validation ._atom_frm__standard:valid {
-	border-color: var(--atom_frm___valid);
-}
+	._atom_frm__checkbox:invalid {
+		--atom_frm__checkbox_background_color: var(--atom_frm___invalid);
+	}
 
-._atom_frm___validation ._atom_frm__outline:focus {
-	background-color: var(--atom_frm__outline___focus_background_color);
-	border-color: var(--atom_frm__outline___focus_border_color);
-	color: var(--atom_frm__outline___focus_color);
-}
+	._atom_frm__standard:invalid,
+	._atom_frm__outline:invalid {
+		border-color: var(--atom_frm___invalid);
+	}
 
-._atom_frm___validation ._atom_frm__standard:focus {
-	background-color: var(--atom_frm__standard___focus_background_color);
-	border-color: var(--atom_frm__standard___focus_border_color);
-	color: var(--atom_frm__standard___focus_color);
-}
+	// // Valid
+	// ._atom_frm__radio:valid {
+	// 	--atom_frm__radio_background_color: var(--atom_frm___valid);
+	// }
 
-._atom_frm___validation ._atom_frm__error___message {
-	visibility: visible;
+	// ._atom_frm__checkbox:valid {
+	// 	--atom_frm__checkbox_background_color: var(--atom_frm___valid);
+	// }
+
+	// ._atom_frm__outline:valid,
+	// ._atom_frm__standard:valid {
+	// 	border-color: var(--atom_frm___valid);
+	// }
+
+	._atom_frm__outline:focus {
+		background-color: var(--atom_frm__outline___focus_background_color);
+		border-color: var(--atom_frm__outline___focus_border_color);
+		color: var(--atom_frm__outline___focus_color);
+	}
+
+	._atom_frm__standard:focus {
+		background-color: var(--atom_frm__standard___focus_background_color);
+		border-color: var(--atom_frm__standard___focus_border_color);
+		color: var(--atom_frm__standard___focus_color);
+	}
+
+	._atom_frm__error___message {
+		visibility: visible;
+	}
 }

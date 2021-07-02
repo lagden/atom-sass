@@ -5,6 +5,7 @@
   --atom_color_red: hsl(357deg 63% 59%);
   --atom_color_green: hsl(120deg 39% 58%);
   --atom_color_blue: hsl(209deg 93% 68%);
+  --atom_color_white: hsl(0deg 0% 100%);
   --atom_frm___default: var(--atom_color_dark_gray);
   --atom_frm___disabled: hsl(240deg 8% 66% / 80%);
   --atom_frm___required: hsl(257deg 45% 54%);
@@ -19,6 +20,7 @@
   --atom_frm__label___disabled_color: var(--atom_frm___disabled);
   --atom_frm__label___disabled___after_color: var(--atom_frm___disabled);
   --atom_frm__group_grid_gap: 0.5em 1em;
+  --atom_frm__group___toggle_grid_gap: 1px;
   --atom_frm__base_background_color: transparent;
   --atom_frm__base_border_radius: 0;
   --atom_frm__base_color: inherit;
@@ -27,6 +29,7 @@
   --atom_frm__base_padding: 0.4em;
   --atom_frm__base_width: 100%;
   --atom_frm__base___placeholder_color: hsl(240deg 8% 44% / 85%);
+  --atom_frm__base___disabled___placeholder_color: hsl(0deg 0% 0% / 0%);
   --atom_frm__base___loading_background_image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100" width="40" height="40"><path fill="hsl(0deg 0% 100%)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="0.5s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg>');
   --atom_frm__outline_background_color: transparent;
   --atom_frm__outline_border_color: var(--atom_color_gray);
@@ -44,7 +47,7 @@
   --atom_frm__standard_border_color: var(--atom_color_gray);
   --atom_frm__standard_border_radius: 0;
   --atom_frm__standard_border_style: solid;
-  --atom_frm__standard_border_width: 0 0 2px 0;
+  --atom_frm__standard_border_width: 0 0 1px 0;
   --atom_frm__standard_color: inherit;
   --atom_frm__standard___focus_background_color: transparent;
   --atom_frm__standard___focus_border_color: var(--atom_frm___focus);
@@ -60,8 +63,6 @@
   --atom_frm__select_padding_right: 26px;
   --atom_frm__select___focus_background_image: var(--atom_frm__select_icon);
   --atom_frm__select___disabled_background_image: var(--atom_frm__select_icon);
-  --atom_frm__error___message_color: var(--atom_frm___invalid);
-  --atom_frm__error___message_font_size: 0.75em;
   --atom_frm__checkbox_border_radius: 5px;
   --atom_frm__checkbox_width: 21px;
   --atom_frm__checkbox_height: 21px;
@@ -106,7 +107,12 @@
   --atom_frm__radio___checked_opacity: 1;
   --atom_frm__radio___checked_scale: 0.5;
   --atom_frm__radio___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
-  --atom_frm__radio___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%); }
+  --atom_frm__radio___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
+  --atom_frm__radio___toggle_color: var(--atom_color_white);
+  --atom_frm__radio___toggle___focus_border: 2px solid hsl(209deg 93% 48%);
+  --atom_frm__radio___toggle___checked_color: var(--atom_color_white);
+  --atom_frm__error___message_color: var(--atom_frm___invalid);
+  --atom_frm__error___message_font_size: 0.75em; }
 
 ._atom_frm__checkbox, ._atom_frm__checkbox + span,
 ._atom_frm__checkbox + label, ._atom_frm__radio + span,
@@ -119,7 +125,8 @@
 ._atom_frm__label {
   display: block;
   margin: var(--atom_frm__label_margin);
-  color: var(--atom_frm__label_color); }
+  color: var(--atom_frm__label_color);
+  position: relative; }
 
 ._atom_frm__label:focus,
 ._atom_frm__label:focus-within {
@@ -139,14 +146,27 @@
   color: var(--atom_frm__label___required___after_color); }
 
 ._atom_frm__label___disabled {
-  color: var(--atom_frm__label___disabled_color); }
+  color: var(--atom_frm__label___disabled_color);
+  cursor: not-allowed; }
   ._atom_frm__label___disabled:after {
     color: var(--atom_frm__label___disabled___after_color); }
+
+._atom_frm__label___toggle {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; }
 
 ._atom_frm__group {
   display: grid;
   grid-gap: var(--atom_frm__group_grid_gap);
   grid-template-columns: repeat(auto-fill, minmax(100px, max-content)); }
+
+._atom_frm__group___toggle {
+  display: grid;
+  grid-gap: var(--atom_frm__group___toggle_grid_gap);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
 
 ._atom_frm__base {
   appearance: none;
@@ -165,6 +185,11 @@
 
 ._atom_frm__base::placeholder {
   color: var(--atom_frm__base___placeholder_color); }
+
+._atom_frm__base:disabled {
+  cursor: not-allowed; }
+  ._atom_frm__base:disabled::placeholder {
+    color: var(--atom_frm__base___disabled___placeholder_color); }
 
 ._atom_frm__outline {
   background-color: var(--atom_frm__outline_background_color);
@@ -305,12 +330,6 @@
 ._atom_frm__checkbox._atom_frm__checkbox___switch:focus {
   --atom_frm__checkbox_switch___after_box_shadow: var(--atom_frm__checkbox_switch___focus_box_shadow); }
 
-._atom_frm___validation ._atom_frm__checkbox:invalid {
-  --atom_frm__checkbox_background_color: var(--atom_frm___invalid); }
-
-._atom_frm___validation ._atom_frm__checkbox:valid {
-  --atom_frm__checkbox_background_color: var(--atom_frm___valid); }
-
 ._atom_frm__radio {
   appearance: none;
   box-sizing: border-box;
@@ -367,11 +386,30 @@
 ._atom_frm__radio:focus {
   --atom_frm__radio_box_shadow: var(--atom_frm__radio___focus_box_shadow); }
 
-._atom_frm___validation ._atom_frm__radio:invalid {
-  --atom_frm__radio_background_color: var(--atom_frm___invalid); }
+._atom_frm__radio._atom_frm__radio___toggle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
 
-._atom_frm___validation ._atom_frm__radio:valid {
-  --atom_frm__radio_background_color: var(--atom_frm___valid); }
+._atom_frm__radio._atom_frm__radio___toggle + span,
+._atom_frm__radio._atom_frm__radio___toggle + label {
+  color: var(--atom_frm__radio___toggle_color, var(--atom_color_white));
+  background-color: var(--atom_frm__radio_background_color, var(--atom_color_gray));
+  width: 100%;
+  height: var(--atom_frm__base_height);
+  margin: var(--atom_frm__base_margin);
+  box-sizing: border-box;
+  transition: background-color .3s; }
+
+._atom_frm__radio._atom_frm__radio___toggle:focus + span,
+._atom_frm__radio._atom_frm__radio___toggle:focus + label {
+  border: var(--atom_frm__radio___toggle___focus_border); }
+
+._atom_frm__radio._atom_frm__radio___toggle:checked + span,
+._atom_frm__radio._atom_frm__radio___toggle:checked + label {
+  color: var(--atom_frm__radio___toggle___checked_color, var(--atom_color_white));
+  background-color: var(--atom_frm__radio___checked_background_color); }
 
 ._atom_frm__error___message {
   box-sizing: border-box;
@@ -386,13 +424,17 @@
   line-height: 25px;
   display: block; }
 
+._atom_frm___validation ._atom_frm__radio._atom_frm__radio___toggle:invalid + span,
+._atom_frm___validation ._atom_frm__radio._atom_frm__radio___toggle:invalid + label,
+._atom_frm___validation ._atom_frm__radio:invalid {
+  --atom_frm__radio_background_color: var(--atom_frm___invalid); }
+
+._atom_frm___validation ._atom_frm__checkbox:invalid {
+  --atom_frm__checkbox_background_color: var(--atom_frm___invalid); }
+
 ._atom_frm___validation ._atom_frm__standard:invalid,
 ._atom_frm___validation ._atom_frm__outline:invalid {
   border-color: var(--atom_frm___invalid); }
-
-._atom_frm___validation ._atom_frm__outline:valid,
-._atom_frm___validation ._atom_frm__standard:valid {
-  border-color: var(--atom_frm___valid); }
 
 ._atom_frm___validation ._atom_frm__outline:focus {
   background-color: var(--atom_frm__outline___focus_background_color);

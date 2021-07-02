@@ -6,6 +6,7 @@
 	--atom_color_red: hsl(357deg 63% 59%);
 	--atom_color_green: hsl(120deg 39% 58%);
 	--atom_color_blue: hsl(209deg 93% 68%);
+	--atom_color_white: hsl(0deg 0% 100%);
 
 	// Form colors
 	--atom_frm___default: var(--atom_color_dark_gray);
@@ -26,6 +27,7 @@
 
 	// Group
 	--atom_frm__group_grid_gap: 0.5em 1em;
+	--atom_frm__group___toggle_grid_gap: 1px;
 
 	// Base form
 	--atom_frm__base_background_color: transparent;
@@ -37,6 +39,7 @@
 	--atom_frm__base_width: 100%;
 
 	--atom_frm__base___placeholder_color: hsl(240deg 8% 44% / 85%);
+	--atom_frm__base___disabled___placeholder_color: hsl(0deg 0% 0% / 0%);
 	--atom_frm__base___loading_background_image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100" width="40" height="40"><path fill="hsl(0deg 0% 100%)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="0.5s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg>');
 
 	// Outline form
@@ -58,7 +61,7 @@
 	--atom_frm__standard_border_color: var(--atom_color_gray);
 	--atom_frm__standard_border_radius: 0;
 	--atom_frm__standard_border_style: solid;
-	--atom_frm__standard_border_width: 0 0 2px 0;
+	--atom_frm__standard_border_width: 0 0 1px 0;
 	--atom_frm__standard_color: inherit;
 	--atom_frm__standard___focus_background_color: transparent;
 	--atom_frm__standard___focus_border_color: var(--atom_frm___focus);
@@ -111,7 +114,7 @@
 	--atom_frm__checkbox_switch___focus_box_shadow: 0 0 0 7px hsl(240deg 8% 30% / 20%);
 	--atom_frm__checkbox_switch___focus___checked_box_shadow: 0 0 0 7px hsl(209deg 93% 68% / 20%);
 
-	// Radio + Toggle Mode
+	// Radio
 	--atom_frm__radio_width: 21px;
 	--atom_frm__radio_height: 21px;
 	--atom_frm__radio_border_radius: 50%;
@@ -130,6 +133,11 @@
 	--atom_frm__radio___checked_scale: 0.5;
 	--atom_frm__radio___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
 	--atom_frm__radio___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
+
+	// Radio + Toggle Mode
+	--atom_frm__radio___toggle_color: var(--atom_color_white);
+	--atom_frm__radio___toggle___focus_border: 2px solid hsl(209deg 93% 48%);
+	--atom_frm__radio___toggle___checked_color: var(--atom_color_white);
 
 	// Validation Error
 	--atom_frm__error___message_color: var(--atom_frm___invalid);

@@ -17,3 +17,10 @@
 ._atom_frm__base::placeholder {
 	color: var(--atom_frm__base___placeholder_color);
 }
+
+._atom_frm__base:disabled {
+	cursor: not-allowed;
+	&::placeholder {
+		color: var(--atom_frm__base___disabled___placeholder_color);
+	}
+}

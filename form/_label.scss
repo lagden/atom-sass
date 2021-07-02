@@ -3,6 +3,7 @@
 	display: block;
 	margin: var(--atom_frm__label_margin);
 	color: var(--atom_frm__label_color);
+	position: relative;
 }
 
 ._atom_frm__label:focus,
@@ -27,7 +28,16 @@
 
 ._atom_frm__label___disabled {
 	color: var(--atom_frm__label___disabled_color);
+	cursor: not-allowed;
 	&:after {
 		color: var(--atom_frm__label___disabled___after_color);
 	}
+}
+
+._atom_frm__label___toggle {
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
 }

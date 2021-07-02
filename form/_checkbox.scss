@@ -121,12 +121,3 @@
 ._atom_frm__checkbox._atom_frm__checkbox___switch:focus {
 	--atom_frm__checkbox_switch___after_box_shadow: var(--atom_frm__checkbox_switch___focus_box_shadow);
 }
-
-// Validation
-._atom_frm___validation ._atom_frm__checkbox:invalid {
-	--atom_frm__checkbox_background_color: var(--atom_frm___invalid);
-}
-
-._atom_frm___validation ._atom_frm__checkbox:valid {
-	--atom_frm__checkbox_background_color: var(--atom_frm___valid);
-}
