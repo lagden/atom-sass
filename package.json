@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-atom-sass",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": "github:lagden/atom-sass",
   "description": "Global Sass para os componentes atômicos.",
   "keywords": [
