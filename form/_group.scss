@@ -2,14 +2,14 @@
 	display: grid;
 	grid-gap: var(--atom_frm__group_grid_gap);
 	// grid-template-columns: 1fr;
-	grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
+	grid-template-columns: repeat(auto-fill, minmax(0, max-content));
 }
 
 ._atom_frm__group___toggle {
 	display: grid;
 	grid-gap: var(--atom_frm__group___toggle_grid_gap);
 	// grid-template-columns: 1fr 1fr;
-	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
 // @media (min-width: 600px) {
