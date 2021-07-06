@@ -2,18 +2,15 @@
 	display: grid;
 	grid-gap: var(--atom_frm__group_grid_gap);
 	// grid-template-columns: 1fr;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
 }
 
 ._atom_frm__group___toggle {
-	display: grid;
 	grid-gap: var(--atom_frm__group___toggle_grid_gap);
-	// grid-template-columns: 1fr 1fr;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-// @media (min-width: 600px) {
+// @media (min-width: 400px) {
 // 	._atom_frm__group {
-// 		grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
+// 		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
 // 	}
 // }
