@@ -19,6 +19,9 @@
 	grid-gap: var(--atom_frm__label___checkbox_radio_grid_gap);
 	width: fit-content;
 	align-items: flex-start;
+	& > span {
+		word-break: break-all;
+	}
 }
 
 ._atom_frm__label___required:after {

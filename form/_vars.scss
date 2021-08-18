@@ -104,6 +104,13 @@
 	--atom_frm__checkbox___not_switch___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
 	--atom_frm__checkbox___not_switch___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
 
+	// Checkbox Outline
+	--atom_frm__checkbox___outline_background_color: transparent;
+	--atom_frm__checkbox___outline_border_width: 1px;
+	--atom_frm__checkbox___outline_border_style: solid;
+	--atom_frm__checkbox___outline_border_color: var(--atom_color_gray);
+
+	// Checkbox Switch Mode
 	--atom_frm__checkbox_switch_width: 38px;
 	--atom_frm__checkbox_switch_border_radius: 11px;
 	--atom_frm__checkbox_switch___after_border_radius: 50%;
@@ -122,7 +129,7 @@
 	--atom_frm__radio___plus___label_and_span_margin: 0 0 0 3px;
 	--atom_frm__radio___checked_background_color: var(--atom_color_blue);
 	--atom_frm__radio___disabled_background_color: var(--atom_frm___disabled);
-	--atom_frm__radio___disabled___checked_background_color: var(--atom_frm___disabled);
+	--atom_frm__radio___disabled___checked_background_color: hsl(240deg 8% 50% / 30%);
 
 	--atom_frm__radio___after_width: 5px;
 	--atom_frm__radio___after_height: 9px;
@@ -133,6 +140,12 @@
 	--atom_frm__radio___checked_scale: 0.5;
 	--atom_frm__radio___focus_box_shadow: 0 0 0 5px hsl(240deg 8% 30% / 20%);
 	--atom_frm__radio___focus___checked_box_shadow: 0 0 0 5px hsl(209deg 93% 68% / 20%);
+
+	// Radio Outline
+	--atom_frm__radio___outline_background_color: transparent;
+	--atom_frm__radio___outline_border_width: 1px;
+	--atom_frm__radio___outline_border_style: solid;
+	--atom_frm__radio___outline_border_color: var(--atom_color_gray);
 
 	// Radio + Toggle Mode
 	--atom_frm__radio___toggle_color: var(--atom_color_white);

@@ -2,7 +2,7 @@
 	display: grid;
 	grid-gap: var(--atom_frm__group_grid_gap);
 	// grid-template-columns: 1fr;
-	grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
 ._atom_frm__group___toggle {
@@ -11,6 +11,6 @@
 
 // @media (min-width: 400px) {
 // 	._atom_frm__group {
-// 		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+// 		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 // 	}
 // }

@@ -51,6 +51,24 @@
 	cursor: not-allowed;
 }
 
+._atom_frm__checkbox._atom_frm__checkbox___outline:not(._atom_frm__checkbox___switch) {
+	border-style: var(--atom_frm__checkbox___outline_border_style);
+	border-width: var(--atom_frm__checkbox___outline_border_width);
+	border-color: var(--atom_frm__checkbox___outline_border_color);
+	--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___outline_background_color);
+	&:checked {
+		--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___checked_background_color);
+		border-color: var(--atom_frm__checkbox_background_color);
+	}
+	&:disabled {
+		border-color: var(--atom_frm__checkbox___disabled_background_color);
+		&:checked {
+			--atom_frm__checkbox_background_color: var(--atom_frm__checkbox___disabled_background_color);
+			border: none;
+		}
+	}
+}
+
 ._atom_frm__checkbox:not(._atom_frm__checkbox___switch) {
 	width: var(--atom_frm__checkbox_width);
 	border-radius: var(--atom_frm__checkbox_border_radius);

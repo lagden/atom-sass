@@ -52,6 +52,24 @@
 	cursor: not-allowed;
 }
 
+._atom_frm__radio._atom_frm__radio___outline:not(._atom_frm__radio___toggle) {
+	border-style: var(--atom_frm__radio___outline_border_style);
+	border-width: var(--atom_frm__radio___outline_border_width);
+	border-color: var(--atom_frm__radio___outline_border_color);
+	--atom_frm__radio_background_color: var(--atom_frm__radio___outline_background_color);
+	&:checked {
+		--atom_frm__radio_background_color: var(--atom_frm__radio___checked_background_color);
+		border-color: var(--atom_frm__radio_background_color);
+	}
+	&:disabled {
+		border-color: var(--atom_frm__radio___disabled_background_color);
+		&:checked {
+			--atom_frm__radio_background_color: var(--atom_frm__radio___disabled_background_color);
+			border: none;
+		}
+	}
+}
+
 ._atom_frm__radio:disabled + span,
 ._atom_frm__radio:disabled + label {
 	color: var(--atom_frm__label___disabled_color);
@@ -90,4 +108,14 @@
 ._atom_frm__radio._atom_frm__radio___toggle:checked + label {
 	color: var(--atom_frm__radio___toggle___checked_color, var(--atom_color_white));
 	background-color: var(--atom_frm__radio___checked_background_color);
+}
+
+._atom_frm__radio._atom_frm__radio___toggle:disabled + span,
+._atom_frm__radio._atom_frm__radio___toggle:disabled + label {
+	background-color: var(--atom_frm__radio___disabled_background_color);
+}
+
+._atom_frm__radio._atom_frm__radio___toggle:disabled:checked + span,
+._atom_frm__radio._atom_frm__radio___toggle:disabled:checked + label {
+	background-color: var(--atom_frm__radio___disabled___checked_background_color);
 }
