@@ -1,12 +1,13 @@
 {
   "name": "@tadashi/svelte-atom-sass",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "repository": "github:lagden/atom-sass",
-  "description": "Global Sass para os componentes atômicos.",
+  "description": "CSS para os componentes atômicos.",
   "keywords": [
     "atom",
     "sass",
-    "css"
+    "css",
+    "elements"
   ],
   "main": "dist/atom.css",
   "type": "module",
@@ -21,9 +22,10 @@
     "node": ">=14.16.0"
   },
   "scripts": {
-    "build": "node-sass --recursive ./form/atom.sass --output ./dist"
+    "_old_build": "node-sass --recursive ./form/atom.sass --output ./dist",
+    "build": "sass --no-source-map ./form/atom.sass ./dist/atom.css"
   },
   "devDependencies": {
-    "node-sass": "6.0.1"
+    "sass": "1.38.0"
   }
 }
