@@ -153,6 +153,10 @@
 	--atom_frm__radio___toggle___checked_color: var(--atom_color_white);
 
 	// Validation Error
+	--atom_frm__helper___message_color: var(--atom_frm___default);
+	--atom_frm__helper___message_font_size: 0.75em;
+
+	// Validation Error
 	--atom_frm__error___message_color: var(--atom_frm___invalid);
 	--atom_frm__error___message_font_size: 0.75em;
 }

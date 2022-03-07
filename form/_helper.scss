@@ -1,0 +1,21 @@
+._atom_frm__helper___message {
+	box-sizing: border-box;
+	color: var(--atom_frm__helper___message_color);
+	cursor: pointer;
+	font-size: var(--atom_frm__helper___message_font_size);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	// visibility: hidden;
+	white-space: nowrap;
+	// width: 100%;
+	min-height: 25px;
+	line-height: 25px;
+	display: block;
+}
+
+._atom_frm___validation {
+	._atom_frm__error___message:empty,
+	._atom_frm__error___message:not(:empty) ~ ._atom_frm__helper___message {
+		display: none;
+	}
+}

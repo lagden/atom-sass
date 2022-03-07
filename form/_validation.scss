@@ -5,12 +5,12 @@
 	font-size: var(--atom_frm__error___message_font_size);
 	overflow: hidden;
 	text-overflow: ellipsis;
-	visibility: hidden;
+	// visibility: hidden;
 	white-space: nowrap;
 	// width: 100%;
 	min-height: 25px;
 	line-height: 25px;
-	display: block;
+	display: none;
 }
 
 // Validation
@@ -58,6 +58,7 @@
 	}
 
 	._atom_frm__error___message {
-		visibility: visible;
+		// visibility: visible;
+		display: block;
 	}
 }

@@ -119,6 +119,8 @@
   --atom_frm__radio___toggle_color: var(--atom_color_white);
   --atom_frm__radio___toggle___focus_border: 3px solid hsl(209deg 93% 48%);
   --atom_frm__radio___toggle___checked_color: var(--atom_color_white);
+  --atom_frm__helper___message_color: var(--atom_frm___default);
+  --atom_frm__helper___message_font_size: 0.75em;
   --atom_frm__error___message_color: var(--atom_frm___invalid);
   --atom_frm__error___message_font_size: 0.75em;
 }
@@ -177,6 +179,10 @@
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+._atom_frm__label___bold {
+  font-weight: bold;
 }
 
 ._atom_frm__group {
@@ -256,6 +262,11 @@
   background-color: var(--atom_frm__standard___focus_background_color);
   border-color: var(--atom_frm__standard___focus_border_color);
   color: var(--atom_frm__standard___focus_color);
+}
+
+._atom_frm__wipe {
+  border: none;
+  padding: 0;
 }
 
 ._atom_frm__select {
@@ -516,6 +527,24 @@
   background-color: var(--atom_frm__radio___disabled___checked_background_color);
 }
 
+._atom_frm__helper___message {
+  box-sizing: border-box;
+  color: var(--atom_frm__helper___message_color);
+  cursor: pointer;
+  font-size: var(--atom_frm__helper___message_font_size);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: 25px;
+  line-height: 25px;
+  display: block;
+}
+
+._atom_frm___validation ._atom_frm__error___message:empty,
+._atom_frm___validation ._atom_frm__error___message:not(:empty) ~ ._atom_frm__helper___message {
+  display: none;
+}
+
 ._atom_frm__error___message {
   box-sizing: border-box;
   color: var(--atom_frm__error___message_color);
@@ -523,11 +552,10 @@
   font-size: var(--atom_frm__error___message_font_size);
   overflow: hidden;
   text-overflow: ellipsis;
-  visibility: hidden;
   white-space: nowrap;
   min-height: 25px;
   line-height: 25px;
-  display: block;
+  display: none;
 }
 
 ._atom_frm___validation ._atom_frm__radio._atom_frm__radio___toggle:invalid + span,
@@ -553,5 +581,5 @@
   color: var(--atom_frm__standard___focus_color);
 }
 ._atom_frm___validation ._atom_frm__error___message {
-  visibility: visible;
+  display: block;
 }
