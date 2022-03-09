@@ -157,7 +157,7 @@
 }
 ._atom_frm__label___radio > span,
 ._atom_frm__label___checkbox > span {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 ._atom_frm__label___required:after {
