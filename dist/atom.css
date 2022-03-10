@@ -527,6 +527,12 @@
   background-color: var(--atom_frm__radio___disabled___checked_background_color);
 }
 
+._atom_frm__message {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto;
+}
+
 ._atom_frm__helper___message {
   box-sizing: border-box;
   color: var(--atom_frm__helper___message_color);
