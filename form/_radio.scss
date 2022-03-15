@@ -5,7 +5,7 @@
 	position: relative;
 	width: var(--atom_frm__radio_width);
 	height: var(--atom_frm__radio_height);
-	background-color: var(--atom_frm__radio_background_color, var(--atom_color_gray));
+	background-color: var(--atom_frm__radio_background_color, var(--atom_secondary));
 	box-shadow: var(--atom_frm__radio_box_shadow, none);
 	border-radius: var(--atom_frm__radio_border_radius);
 	margin: var(--atom_frm__radio_margin);
@@ -90,8 +90,8 @@
 
 ._atom_frm__radio._atom_frm__radio___toggle + span,
 ._atom_frm__radio._atom_frm__radio___toggle + label {
-	color: var(--atom_frm__radio___toggle_color, var(--atom_color_white));
-	background-color: var(--atom_frm__radio_background_color, var(--atom_color_gray));
+	color: var(--atom_frm__radio___toggle_color, var(--atom_senary));
+	background-color: var(--atom_frm__radio_background_color, var(--atom_secondary));
 	width: 100%;
 	height: var(--atom_frm__base_height);
 	margin: var(--atom_frm__base_margin);
@@ -106,7 +106,7 @@
 
 ._atom_frm__radio._atom_frm__radio___toggle:checked + span,
 ._atom_frm__radio._atom_frm__radio___toggle:checked + label {
-	color: var(--atom_frm__radio___toggle___checked_color, var(--atom_color_white));
+	color: var(--atom_frm__radio___toggle___checked_color, var(--atom_senary));
 	background-color: var(--atom_frm__radio___checked_background_color);
 }
 
