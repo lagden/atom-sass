@@ -1,0 +1,11 @@
+._atom_frm__request {
+	position: relative;
+	display: grid;
+	align-items: var(--atom_frm__request_align_items, center);
+	grid-gap: var(--atom_frm__request_grid_gap, 0.5em);
+	grid-template-columns: 1fr auto;
+}
+
+._atom_frm__request_target {
+	position: relative;
+}

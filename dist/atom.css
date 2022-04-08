@@ -2,16 +2,20 @@
   --atom_primary: hsl(240deg 8% 33%);
   --atom_secondary: hsl(240deg 8% 50%);
   --atom_tertiary: hsl(357deg 63% 59%);
-  --atom_quaternary: hsl(120deg 39% 58%);
-  --atom_quinary: hsl(209deg 93% 68%);
+  --atom_quaternary: hsl(120deg 39% 59%);
+  --atom_quinary: hsl(209deg 93% 59%);
   --atom_senary: hsl(0deg 0% 100%);
-  --atom_frm___default: var(--atom_primary);
-  --atom_frm___disabled: hsl(240deg 8% 66% / 80%);
-  --atom_frm___required: hsl(257deg 45% 54%);
-  --atom_frm___invalid: var(--atom_tertiary);
-  --atom_frm___valid: var(--atom_quaternary);
-  --atom_frm___focus: var(--atom_quinary);
-  --atom_frm___focus_within: var(--atom_quinary);
+  --atom_septenary: hsl(240deg 8% 50%);
+  --atom_octal: hsl(257deg 45% 54%);
+  --atom_frm___default: var(--atom_primary, hsl(240deg 8% 33%));
+  --atom_frm___disabled: var(--atom_septenary, hsl(240deg 8% 50%));
+  --atom_frm___required: var(--atom_octal, hsl(257deg 45% 54%));
+  --atom_frm___invalid: var(--atom_tertiary, hsl(357deg 63% 59%));
+  --atom_frm___valid: var(--atom_quaternary, hsl(120deg 39% 59%));
+  --atom_frm___focus: var(--atom_quinary, hsl(209deg 93% 59%));
+  --atom_frm___focus_within: var(--atom_quinary, hsl(209deg 93% 59%));
+  --atom_frm___checked: var(--atom_quinary, hsl(209deg 93% 59%));
+  --atom_frm___active: var(--atom_quinary, hsl(209deg 93% 59%));
   --atom_frm__label_margin: 0 0 0.5em;
   --atom_frm__label_color: inherit;
   --atom_frm__label___checkbox_radio_grid_gap: 3px;
@@ -67,7 +71,7 @@
   --atom_frm__checkbox_height: 21px;
   --atom_frm__checkbox_margin: 0 0 0 6px;
   --atom_frm__checkbox___plus___label_and_span_margin: 0 0 0 3px;
-  --atom_frm__checkbox___checked_background_color: var(--atom_quinary);
+  --atom_frm__checkbox___checked_background_color: var(--atom_frm___checked);
   --atom_frm__checkbox___disabled_background_color: var(--atom_frm___disabled);
   --atom_frm__checkbox___disabled___checked_background_color: var(--atom_frm___disabled);
   --atom_frm__checkbox___focus_border: 0px solid var(--atom_frm___focus);
@@ -99,7 +103,7 @@
   --atom_frm__radio_border_radius: 50%;
   --atom_frm__radio_margin: 0 0 0 6px;
   --atom_frm__radio___plus___label_and_span_margin: 0 0 0 3px;
-  --atom_frm__radio___checked_background_color: var(--atom_quinary);
+  --atom_frm__radio___checked_background_color: var(--atom_frm___checked);
   --atom_frm__radio___disabled_background_color: var(--atom_frm___disabled);
   --atom_frm__radio___disabled___checked_background_color: hsl(240deg 8% 50% / 30%);
   --atom_frm__radio___after_width: 5px;
@@ -266,6 +270,18 @@
 ._atom_frm__wipe {
   border: none;
   padding: 0;
+}
+
+._atom_frm__request {
+  position: relative;
+  display: grid;
+  align-items: var(--atom_frm__request_align_items, center);
+  grid-gap: var(--atom_frm__request_grid_gap, 0.5em);
+  grid-template-columns: 1fr auto;
+}
+
+._atom_frm__request_target {
+  position: relative;
 }
 
 ._atom_frm__select {
@@ -574,6 +590,16 @@
 ._atom_frm___validation ._atom_frm__standard:invalid,
 ._atom_frm___validation ._atom_frm__outline:invalid {
   border-color: var(--atom_frm___invalid);
+}
+._atom_frm___validation ._atom_frm__radio:valid {
+  --atom_frm__radio_background_color: var(--atom_frm___valid);
+}
+._atom_frm___validation ._atom_frm__checkbox:valid {
+  --atom_frm__checkbox_background_color: var(--atom_frm___valid);
+}
+._atom_frm___validation ._atom_frm__outline:valid,
+._atom_frm___validation ._atom_frm__standard:valid {
+  border-color: var(--atom_frm___valid);
 }
 ._atom_frm___validation ._atom_frm__outline:focus {
   background-color: var(--atom_frm__outline___focus_background_color);
