@@ -1,4 +1,7 @@
-:root {
+// :root {
+*,
+:after,
+:before {
 	// Base colors
 	--atom_primary: hsl(240deg 8% 33%);     // Cinza escuro azulado
 	--atom_secondary: hsl(240deg 8% 50%);   // Cinza azulado
@@ -163,6 +166,32 @@
 	--atom_frm__radio___toggle_color: var(--atom_senary);
 	--atom_frm__radio___toggle___focus_border: 3px solid hsl(209deg 93% 48%);
 	--atom_frm__radio___toggle___checked_color: var(--atom_senary);
+
+
+	// Request
+	// --atom_frm__request_align_items: center
+	// --atom_frm__request_grid_gap: 0.5em
+	// --atom_frm__request_grid_template_columns: 1fr auto
+
+	// Request Items
+	// --atom_frm__request__items_grid_gap: 0.3em;
+	// --atom_frm__request__items_top: calc(100% + 3px);
+	// --atom_frm__request__items_background_color: hsl(225deg 5% 17%);
+	// --atom_frm__request__items_color: hsl(0deg 0% 100%);
+	// --atom_frm__request__items_border_radius: 3px;
+	// --atom_frm__request__items_min_width: max-content;
+
+	// Request Item
+	// --atom_frm__request__item_padding: 0.7em;
+	// --atom_frm__request__item_border_radius: 3px;
+	// --atom_frm__request__item___hover_background_color: hsl(225deg 3% 30%);
+	// --atom_frm__request__item___active_background_color: hsl(225deg 3% 30%);
+
+	// Request Btn
+	// --atom_frm__request__btn_width: 36px;
+	// --atom_frm__request__btn_icon_width: 12px;
+	// --atom_frm__request__btn_icon_height: 12px;
+	// --atom_frm__request__btn_icon_transition: fill .3s, background-color .3s, color .3s, border-color .3s;
 
 
 	// Helper Message

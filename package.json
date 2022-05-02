@@ -26,6 +26,6 @@
     "build": "sass --no-source-map ./form/atom.sass ./dist/atom.css"
   },
   "devDependencies": {
-    "sass": "1.50.0"
+    "sass": "1.51.0"
   }
 }

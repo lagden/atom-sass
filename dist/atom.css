@@ -1,4 +1,6 @@
-:root {
+*,
+:after,
+:before {
   --atom_primary: hsl(240deg 8% 33%);
   --atom_secondary: hsl(240deg 8% 50%);
   --atom_tertiary: hsl(357deg 63% 59%);
@@ -31,7 +33,7 @@
   --atom_frm__base_margin: 0;
   --atom_frm__base_padding: 0.4em;
   --atom_frm__base_width: 100%;
-  --atom_frm__base___placeholder_color: hsl(240deg 8% 44% / 85%);
+  --atom_frm__base___placeholder_color: var(--atom_septenary, hsl(240deg 8% 50%));
   --atom_frm__base___disabled___placeholder_color: hsl(0deg 0% 0% / 0%);
   --atom_frm__base___loading_background_image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100" width="40" height="40"><path fill="hsl(0deg 0% 100%)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="0.5s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg>');
   --atom_frm__outline_background_color: transparent;
@@ -277,11 +279,50 @@
   display: grid;
   align-items: var(--atom_frm__request_align_items, center);
   grid-gap: var(--atom_frm__request_grid_gap, 0.5em);
-  grid-template-columns: 1fr auto;
+  grid-template-columns: var(--atom_frm__request_grid_template_columns, 1fr auto);
 }
 
-._atom_frm__request_target {
-  position: relative;
+._atom_frm__request__items {
+  display: grid;
+  grid-gap: var(--atom_frm__request__items_grid_gap, 0.3em);
+  grid-template-columns: 1fr;
+  width: 100%;
+  min-width: var(--atom_frm__request__items_min_width, max-content);
+  position: absolute;
+  top: var(--atom_frm__request__items_top, calc(100% + 3px));
+  right: auto;
+  bottom: auto;
+  left: auto;
+  background-color: var(--atom_frm__request__items_background_color, hsl(225deg, 5%, 17%));
+  color: var(--atom_frm__request__items_color, hsl(0deg, 0%, 100%));
+  border-radius: var(--atom_frm__request__items_border_radius, 3px);
+  z-index: 1000;
+}
+
+._atom_frm__request__item {
+  cursor: pointer;
+  padding: var(--atom_frm__request__item_padding, 0.7em);
+  border-radius: var(--atom_frm__request__item_border_radius, 3px);
+}
+
+._atom_frm__request__item:hover {
+  background-color: var(--atom_frm__request__item___hover_background_color, hsl(225deg, 3%, 30%));
+}
+
+._atom_frm__request__item:active {
+  background-color: var(--atom_frm__request__item___active_background_color, hsl(225deg, 3%, 30%));
+}
+
+._atom_frm__request__btn {
+  --tadashi_svelte_icon_width: var(--atom_frm__request__btn_icon_width, 12px);
+  --tadashi_svelte_icon_height: var(--atom_frm__request__btn_icon_height, 12px);
+  --tadashi_svelte_icon_transition: var(--atom_frm__request__btn_icon_transition, fill .3s, background-color .3s, color .3s, border-color .3s);
+  width: var(--atom_frm__request__btn_width, 36px);
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ._atom_frm__select {
