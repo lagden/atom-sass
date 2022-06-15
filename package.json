@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-atom-sass",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "repository": "github:lagden/atom-sass",
   "description": "CSS para os componentes atômicos.",
   "keywords": [
@@ -26,6 +26,6 @@
     "build": "sass --no-source-map ./form/atom.sass ./dist/atom.css"
   },
   "devDependencies": {
-    "sass": "1.51.0"
+    "sass": "1.52.3"
   }
 }
