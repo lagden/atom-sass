@@ -10,7 +10,12 @@
 	// width: 100%;
 	min-height: 25px;
 	line-height: 25px;
-	display: none;
+	// display: none;
+	transform: translateY(-150%);
+	transition: transform 0.3s;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 // Validation
@@ -59,6 +64,7 @@
 
 	._atom_frm__error___message {
 		// visibility: visible;
-		display: block;
+		// display: block;
+		transform: translateY(0);
 	}
 }

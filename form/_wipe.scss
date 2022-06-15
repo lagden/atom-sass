@@ -1,4 +1,12 @@
 ._atom_frm__wipe {
 	border: none;
+	height: auto;
 	padding: 0;
+	word-break: break-word;
+}
+
+._atom_frm__no_wipe {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

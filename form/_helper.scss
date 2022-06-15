@@ -11,11 +11,14 @@
 	min-height: 25px;
 	line-height: 25px;
 	display: block;
+	transform: translateY(0);
+	transition: transform 0.3s;
 }
 
 ._atom_frm___validation {
 	._atom_frm__error___message:empty,
 	._atom_frm__error___message:not(:empty) ~ ._atom_frm__helper___message {
-		display: none;
+		// display: none;
+		transform: translateY(-150%);
 	}
 }

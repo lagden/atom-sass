@@ -1,6 +1,4 @@
-*,
-:after,
-:before {
+:root {
   --atom_primary: hsl(240deg 8% 33%);
   --atom_secondary: hsl(240deg 8% 50%);
   --atom_tertiary: hsl(357deg 63% 59%);
@@ -271,7 +269,15 @@
 
 ._atom_frm__wipe {
   border: none;
+  height: auto;
   padding: 0;
+  word-break: break-word;
+}
+
+._atom_frm__no_wipe {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ._atom_frm__request {
@@ -587,6 +593,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: auto;
+  position: relative;
 }
 
 ._atom_frm__helper___message {
@@ -600,11 +607,13 @@
   min-height: 25px;
   line-height: 25px;
   display: block;
+  transform: translateY(0);
+  transition: transform 0.3s;
 }
 
 ._atom_frm___validation ._atom_frm__error___message:empty,
 ._atom_frm___validation ._atom_frm__error___message:not(:empty) ~ ._atom_frm__helper___message {
-  display: none;
+  transform: translateY(-150%);
 }
 
 ._atom_frm__error___message {
@@ -617,7 +626,11 @@
   white-space: nowrap;
   min-height: 25px;
   line-height: 25px;
-  display: none;
+  transform: translateY(-150%);
+  transition: transform 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 ._atom_frm___validation ._atom_frm__radio._atom_frm__radio___toggle:invalid + span,
@@ -653,5 +666,5 @@
   color: var(--atom_frm__standard___focus_color);
 }
 ._atom_frm___validation ._atom_frm__error___message {
-  display: block;
+  transform: translateY(0);
 }
